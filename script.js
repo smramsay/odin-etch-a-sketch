@@ -15,7 +15,19 @@ function createGrid(gridSize) {
 }
 
 function hoverSquareEvent(event) {
-    event.target.style.backgroundColor = 'black';
+    styleSelection = document.querySelector('#fill-style').selectedOptions[0].getAttribute('value');
+    switch (styleSelection) {
+        case "random":
+            let randomColor = [1,2,3].map(num => Math.floor(Math.random() * 256));
+            event.target.style.backgroundColor = `rgb(${randomColor[0]}, ${randomColor[1]}, ${randomColor[2]})`;
+            break;
+        case "increment":
+            break;
+        case "black":
+        default:
+            event.target.style.backgroundColor = "rgb(0, 0, 0)";
+            break;
+    };
 }
 
 function promptNewGrid() {
