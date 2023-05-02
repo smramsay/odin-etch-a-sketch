@@ -20,8 +20,13 @@
     gap: 1px;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px auto;
+}
+
 button {
     padding: 6px 24px;
-    margin: 20px auto;
-    display: flex;
 }
