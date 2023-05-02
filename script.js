@@ -7,11 +7,15 @@ function createGrid(gridSize) {
         for (let k = 0; k < gridSize; k++) {
             const gridSquare = document.createElement('div');
             gridSquare.classList.add('square');
-            gridSquare.addEventListener('pointerenter', (event) => event.target.style.backgroundColor = 'black');
+            gridSquare.addEventListener('pointerenter', hoverSquareEvent);
             gridLine.appendChild(gridSquare);
         }
         gridContainer.appendChild(gridLine);
     }
+}
+
+function hoverSquareEvent(event) {
+    event.target.style.backgroundColor = 'black';
 }
 
 function promptNewGrid() {
