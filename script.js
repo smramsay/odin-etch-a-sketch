@@ -7,6 +7,7 @@ function createGrid(gridSize) {
         for (let k = 0; k < gridSize; k++) {
             const gridSquare = document.createElement('div');
             gridSquare.classList.add('square');
+            gridSquare.addEventListener('pointerenter', (event) => event.target.style.backgroundColor = 'black');
             gridLine.appendChild(gridSquare);
         }
         gridContainer.appendChild(gridLine);
