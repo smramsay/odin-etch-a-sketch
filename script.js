@@ -16,6 +16,9 @@ function createGrid(gridSize) {
 
 function promptNewGrid() {
     newSize = parseInt(prompt("Enter size of new grid", INIT_GRID_SIZE));
+    if (newSize > 100) {
+        alert("Maximum size is 100!");
+    }
     Array.from(gridContainer.children).forEach(child => child.remove());
     createGrid(newSize);
 }
